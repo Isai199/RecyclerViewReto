@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivProduct"
+        android:background="@color/degraded"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:src="@drawable/image_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="Title"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintStart_toEndOf="@id/ivProduct"
+        app:layout_constraintLeft_toRightOf="@id/ivProduct"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:text="price"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintStart_toEndOf="@id/ivProduct"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ivProduct"/>
+    <TextView
+        android:id="@+id/tvMeses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="en"
+        android:textSize="12dp"
+        android:textColor="@color/teal_200"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintStart_toEndOf="@id/ivProduct"
+        app:layout_constraintTop_toBottomOf="@id/tvPrice"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ivProduct"/>
+
+    <TextView
+        android:id="@+id/tvLlegaManana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:text="Llega gratis manana"
+        android:textColor="@color/verde_fuerte"
+        android:background="@color/verde_bajo"
+        app:layout_constraintStart_toEndOf="@id/ivProduct"
+        app:layout_constraintTop_toBottomOf="@id/tvMeses"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ivProduct"/>
+
+    <TextView
+        android:id="@+id/tvFull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="1dp"
+        android:text="FULL"
+        android:textStyle="bold"
+        android:textColor="@color/verde_fuerte"
+        android:drawableStart="@drawable/bolt_icon"
+        app:layout_constraintStart_toEndOf="@id/tvLlegaManana"
+        app:layout_constraintLeft_toRightOf="@id/tvLlegaManana"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMeses"/>
+    <TextView
+        android:id="@+id/tvVendedor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:text="Nombre del vendedor"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@id/ivProduct"
+        app:layout_constraintTop_toBottomOf="@id/tvLlegaManana"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ivProduct"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="4"
+        android:stepSize="0.5"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintStart_toEndOf="@id/ivProduct"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ivProduct"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVendedor" />
+
+    <TextView
+        android:id="@+id/tvNumOpinions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:text="(50)"
+        app:layout_constraintStart_toEndOf="@id/ratingBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@id/tvVendedor"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
